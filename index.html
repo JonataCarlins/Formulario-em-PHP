@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com PHP</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <div class="formulario-tbl">
+            <h1>Cadastro de novo usuário</h1>
+            <form action="salvar.php" method="post">
+                <div>
+                    <label>Nome completo</label>
+                    <input class="input" type="text" name="nome" required>
+                </div>
+                <br>
+                <div>
+                    <label>E-mail</label>
+                    <input class="input" type="email" name="email" required>
+                </div>
+                <br>
+                <div>
+                    <label>Data de nascimento</label>
+                    <input class="input" type="date" name="dataNascimento" required>
+                </div>
+                <br>
+                <div>
+                    <label>Estado</label><br>
+                    <select type="text" name="estado" required>                      
+                        <option value="">Selecione um estado</option>
+                        <option value="RS"> Rio grande do sul</option>
+                        <option value="PR"> Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label>Endereço</label>
+                    <input class="input" type="text" name="endereco" required>
+                </div>
+                <br>
+                <div>
+                    <label >Sexo</label>   
+                    <label><input type="checkbox" name="generos[]" value="Masculino">Masculino</label>
+                    <label><input type="checkbox" name="generos[]" value="Feminino">Feminino </label>              
+                </div>
+                <br>
+                <label>Categorias de interesse (marque mais de uma):</label<br>
+                    <div>
+                        <label><input type="checkbox" name="categorias[]" value="Praia">Praia</label>
+                        <label><input type="checkbox" name="categorias[]" value="Campo">Campo</label>
+                        <label><input type="checkbox" name="categorias[]" value="Nacionais">Nacionais</label>
+                        <label><input type="checkbox" name="categorias[]" value="Internacionais">Internacionais</label>
+                        <label><input type="checkbox" name="categorias[]" value="Serra">Serra</label>
+                        <label><input type="checkbox" name="categorias[]" value="Cidade">Cidade</label>
+                    </div>
+                    <br>
+                    <div class="login">
+                        <label>Login:</label>
+                        <input class="input" type="text" name="login" required>
+
+                        <label>Senha:</label>
+                        <input class="input" type="password" name="senha" required>
+                    </div>
+                    <br>
+                    <div class="botao">
+                        <input class="limpar" type="reset" value="Limpar">
+                        <input class="salvar" type="submit" value="Salvar">
+                    </div>
+
+        </div>
+        </form>
+    </section>
+</body>
+
+</html>
